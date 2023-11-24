@@ -116,6 +116,7 @@
   margin: .5rem;
   background-color: #4a4848;
   box-shadow: 0.3em 0.3em 1em rgba(19, 19, 19, 0.6);
+  padding-bottom: .5rem;
 }
 
 .task__title {
@@ -132,18 +133,20 @@
 .task__description {
   font-size: .8rem;
   font-weight: 400;
-  padding: .1rem;
+  padding: .5rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid;
+
 }
 
 .buttons {
   display: flex;
   justify-content: flex-end;
   gap: .8rem;
+  padding-right: .5rem;
 }
 
 .button {
-  width: 2rem;
-  padding: .3rem;
+  width: 1.8rem;
+  padding: .2rem;
 }

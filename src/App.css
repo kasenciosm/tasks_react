@@ -1,0 +1,149 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  border-bottom: 1px solid;
+  margin-bottom: 1rem;
+
+
+}
+
+.title {
+  padding: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+  text-decoration: none;
+}
+
+.title__link {
+  text-decoration: none;
+  color: white;
+}
+
+.add_button {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  text-align: left;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  letter-spacing: .1rem;
+  font-weight: 500;
+  padding-bottom: 2rem;
+}
+
+.title__form {
+  text-align: left;
+  padding: 1rem;
+  letter-spacing: .3rem;
+  border-bottom: 2px solid;
+}
+
+.task__form {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.form__title {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+.form__description {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  padding: 1rem;
+  font-weight: 600;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.input__title {
+  width: 15rem;
+  padding: .5rem;
+}
+
+.input__description {
+  width: 19rem;
+  padding: .5rem;
+  resize: vertical;
+  min-height: 6rem;
+}
+
+.spinner {
+  border: 2px solid #ded1d1;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border-left-color: transparent;
+
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.tasks {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: .5rem;
+  text-align: left;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  margin: .5rem;
+  background-color: #4a4848;
+  box-shadow: 0.3em 0.3em 1em rgba(19, 19, 19, 0.6);
+}
+
+.task__title {
+  background-color: #1a1919;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid transparent;
+  align-items: center;
+  text-align: center;
+  padding: .5rem;
+}
+
+.task__description {
+  font-size: .8rem;
+  font-weight: 400;
+  padding: .1rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: .8rem;
+}
+
+.button {
+  width: 2rem;
+  padding: .3rem;
+}

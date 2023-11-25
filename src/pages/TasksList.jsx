@@ -9,7 +9,7 @@ function TasksList() {
     const navigate = useNavigate()
 
     const loadTasks = async () => {
-        const response = await fetch('http://localhost:4000/tasks')
+        const response = await fetch('https://tasks-node-postgres.vercel.app/tasks')
         const data = await response.json()
         setTasks(data)
     }
@@ -23,7 +23,7 @@ function TasksList() {
                 }
                 return task;
             }))
-            const response = await fetch(`http://localhost:4000/tasks/${id}`, {
+            const response = await fetch(`https://tasks-node-postgres.vercel.app/tasks/${id}`, {
                 method: 'DELETE'
             })
 

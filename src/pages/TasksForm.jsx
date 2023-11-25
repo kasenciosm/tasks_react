@@ -22,7 +22,7 @@ function TasksForm() {
         setLoading(true)
 
         if (editing) {
-            const response = await fetch(`http://localhost:4000/tasks/${params.id}`, {
+            const response = await fetch(`https://tasks-node-postgres.vercel.app/tasks/${params.id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(task)
@@ -30,7 +30,7 @@ function TasksForm() {
             const data = await response.json()
             console.log(data)
         } else {
-            const res = await fetch('http://localhost:4000/tasks', {
+            const res = await fetch('https://tasks-node-postgres.vercel.app/tasks', {
                 method: 'POST',
                 body: JSON.stringify(task),
                 headers: { 'Content-Type': 'application/json' },
@@ -48,7 +48,7 @@ function TasksForm() {
     }
 
     const loadTask = async (id) => {
-        const res = await fetch(`http://localhost:4000/tasks/${id}`)
+        const res = await fetch(`https://tasks-node-postgres.vercel.app/tasks/${id}`)
         const data = await res.json()
         setTask({ title: data.title, description: data.description })
         setEditing(true)

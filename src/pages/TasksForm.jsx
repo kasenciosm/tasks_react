@@ -62,50 +62,54 @@ function TasksForm() {
 
     return (
         <>
-            <div className='title__form'>
-                <Link to='/' className="title__link">
-                    <h1>TASKS</h1>
-                </Link>
-            </div>
-            <h2 className='form'>
-                {editing ? 'EDIT TASK' : 'CREATE TASK'}
-            </h2>
-            <form className='task__form'
-                onSubmit={handleSubmit}>
-                <div className='form__title'>
-                    <label>
-                        Title
-                    </label>
-                    <input
-                        className='input__title'
-                        placeholder='Add title'
-                        name='title'
-                        value={task.title}
-                        onChange={handleChange}>
+            <section className='form'>
+                <article className='form__details'>
+                    <div className='title__form'>
+                        <Link to='/' className='link'>
+                            <h1 className="title__link">TASKS</h1>
+                        </Link>
+                    </div>
+                    <h2 className='form__create'>
+                        {editing ? 'EDIT TASK' : 'CREATE TASK'}
+                    </h2>
+                    <form className='task__form'
+                        onSubmit={handleSubmit}>
+                        <div className='form__title'>
+                            <label>
+                                Title
+                            </label>
+                            <input
+                                className='input__title'
+                                placeholder='Add title'
+                                name='title'
+                                value={task.title}
+                                onChange={handleChange}>
 
-                    </input>
-                </div>
-                <div className='form__description'>
-                    <label>
-                        Description
-                    </label>
-                    <textarea
-                        className='input__description'
-                        placeholder='Description'
-                        name='description'
-                        value={task.description}
-                        onChange={handleChange}>
-                    </textarea>
-                </div>
-                <div>
-                    <button
-                        type='submit'
-                        disabled={!task.title || !task.description}>
-                        {loading ? <div className='spinner'></div> : 'Save'}
-                    </button>
-                </div>
+                            </input>
+                        </div>
+                        <div className='form__description'>
+                            <label>
+                                Description
+                            </label>
+                            <textarea
+                                className='input__description'
+                                placeholder='Description'
+                                name='description'
+                                value={task.description}
+                                onChange={handleChange}>
+                            </textarea>
+                        </div>
+                        < div className='button__form'>
+                            <button
+                                type='submit'
+                                disabled={!task.title || !task.description}>
+                                {loading ? <div className='spinner'></div> : 'Save'}
+                            </button>
+                        </div>
 
-            </form>
+                    </form>
+                </article>
+            </section>
         </>
     )
 }

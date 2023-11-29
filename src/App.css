@@ -12,8 +12,6 @@
   gap: 2rem;
   border-bottom: 1px solid;
   margin-bottom: 1rem;
-
-
 }
 
 .title {
@@ -36,11 +34,18 @@
 
 .form {
   text-align: left;
-  padding-top: 2rem;
-  padding-left: 1rem;
+  padding: 2rem;
+
   letter-spacing: .1rem;
   font-weight: 500;
-  padding-bottom: 2rem;
+
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  border-radius: .625rem;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 2.5rem;
 }
 
 .title__form {
@@ -54,6 +59,10 @@
   display: flex;
   flex-direction: column;
   gap: .5rem;
+}
+
+.form__create {
+  padding: 2rem 1rem;
 }
 
 .form__title {
@@ -86,6 +95,10 @@
   min-height: 6rem;
 }
 
+.button__form {
+  margin-left: 8rem;
+}
+
 .spinner {
   border: 2px solid #ded1d1;
   width: 20px;
@@ -104,6 +117,12 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+.tasks__cards {
+  padding: 2rem;
+  background: #363535;
+  border-radius: .625rem;
 }
 
 .tasks {

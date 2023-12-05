@@ -6,7 +6,8 @@ function TasksForm() {
 
     const [task, setTask] = useState({
         title: '',
-        description: ''
+        description: '',
+        completed: false
     })
 
 

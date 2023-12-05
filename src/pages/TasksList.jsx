@@ -48,6 +48,10 @@ function TasksList() {
 
     }
 
+    function handleToggle(id) {
+        setTasks(task => task.map(task => task.id === id ? { ...task, completed: !task.completed } : task))
+    }
+
     useEffect(() => {
         loadTasks()
     }, [])
@@ -60,7 +64,9 @@ function TasksList() {
                     <article
                         key={`${task.id}_${Math.random()}`}
                     >
-                        <div className='tasks'>
+                        <div className='tasks'
+                            onClick={() => handleToggle(task.id)}
+                            style={{ backgroundColor: task.completed ? 'rgba(247, 27, 27, 0.581)' : 'none', cursor: 'pointer', textDecoration: task.completed ? 'line-through' : 'none' }}>
                             <div className='task__title'>
                                 <p>{task.title}</p>
                             </div>
